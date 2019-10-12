@@ -1,0 +1,30 @@
+<div>
+    <a class="btn btn-secondary" href="/course"><i class="fa fa-plus"></i> Create New</a> 
+     
+    <h3 align="center">Employee's Details List</h3>
+    </div>
+    <table class="table table-striped" cellspacing="50">
+    <thead>
+    <tr>
+    <th>Employee Name</th>
+    <th>Employee Id</th>
+    <th>Employee Duration(Hrs)</th>
+    <th>Employee Salary(INR)</th>
+    <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each list}}
+    <tr align="center">
+    <td>{{this.courseName}}</td>
+    <td>{{this.courseId}}</td>
+    <td>{{this.courseDuration}}</td>
+    <td>{{this.courseFee}}</td>
+    <td>
+    <a href="/course/{{this._id}}"> Edit </a> &nbsp;&nbsp;&nbsp;
+    <a href="/course/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
+    </td>
+    </tr>
+    {{/each}}
+    </tbody>
+    </table>

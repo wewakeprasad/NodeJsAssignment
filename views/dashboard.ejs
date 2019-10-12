@@ -1,0 +1,33 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome <%= user.name %></p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+<form action="/users/addBand" method="POST">
+<input type="hidden" name="_id" value="{{musicBand._id}}">
+ 
+<div class = "form-group">
+<label>Band Name</label>
+<input type="text" maxlength="100" class="form-control" name="name" placeholder="Employee Name" value="{{musicBand.name}}">
+ 
+<div class="text-danger">
+
+</div>
+<div class = "form-group">
+<label> Genre</label>
+<input type="number"  class="form-control" name="genre" placeholder="Genre" value="{{musicBand.genre}} " required>
+</div>
+<div class = "form-row">
+<div class = "form-group col-md-6">
+<label>Employee Salary</label>
+<input type="number" min='10' max='99' class="form-control" name="employeeSalary" placeholder="Employee Salary (INR)" "{{employee.employeeSalary}} " required>
+</div>
+<div class = "form-group col-md-6">
+<label>Employee Salary</label>
+<input type="number" min='100' max="100000" class="form-control" name="employeeDOJ" placeholder="Employee DOJ " "{{employee.employeeDOJ}} " required>
+</div>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+<a class="btn btn-secondary" href="/list"><i class="fa fa-list-alt"></i> View All Employee</a>
+</div>
+</form>
