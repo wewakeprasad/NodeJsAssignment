@@ -1,0 +1,10 @@
+Used Monogo for Storing User and Band Details.
+
+How to connect this project to your Local MongoDb Server
+
+1.In app.js file 
+    mongoose
+  .connect(
+    //   'mongodb://localhost:27017/gfg',  => change this to database
+    { useNewUrlParser: true }
+  )
